@@ -50,10 +50,10 @@ export default function InventoryPage() {
                         {item.currentStock.toLocaleString()} L
                       </td>
                       <td className="px-5 py-4 text-right text-slate-700 font-medium tracking-tight">
-                        Rs. {item.averageCostPrice.toFixed(2)}
+                        Rs. {(item.averageCostPrice || 0).toFixed(2)}
                       </td>
                       <td className="px-5 py-4 text-right text-slate-700 font-medium tracking-tight">
-                        Rs. {item.currentSellingPrice.toFixed(2)}
+                        Rs. {(item.currentSellingPrice || 0).toFixed(2)}
                       </td>
                     </tr>
                   ))}
