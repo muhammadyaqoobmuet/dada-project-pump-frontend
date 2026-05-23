@@ -76,7 +76,7 @@ export default function NewTransactionPage() {
           : undefined,
         partyId: form.partyId || undefined,
       });
-      router.push("/ledger");
+      router.push("/transactions");
     } catch (err: any) {
       setError(err.message || "Failed to save");
     } finally {
@@ -96,7 +96,7 @@ export default function NewTransactionPage() {
   return (
     <ProtectedRoute>
       <div className="max-w-xl">
-        <h1 className="text-xl font-bold mb-6">Add Ledger Entry</h1>
+        <h1 className="text-xl font-bold mb-6">Add Transaction</h1>
         <form
           onSubmit={handleSubmit}
           className="space-y-4 bg-white border border-gray-200 rounded-lg p-6"

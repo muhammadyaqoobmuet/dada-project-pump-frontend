@@ -19,7 +19,7 @@ interface Transaction {
   partyId?: { name: string };
 }
 
-export default function LedgerPage() {
+export default function TransactionsPage() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [total, setTotal] = useState(0);
   const [currentBalance, setCurrentBalance] = useState(0);
@@ -75,7 +75,7 @@ export default function LedgerPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "ledger.csv";
+    a.download = "transactions.csv";
     a.click();
   };
 
@@ -87,7 +87,7 @@ export default function LedgerPage() {
       <div className="space-y-6 animate-in fade-in duration-500">
         <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight text-slate-900">Ledger</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-slate-900">Transactions</h1>
             <p className="text-sm text-slate-500 mt-1 font-medium">All financial transactions</p>
           </div>
           <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ export default function LedgerPage() {
               Export
             </button>
             <Link
-              href="/ledger/new"
+              href="/transactions/new"
               className="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm"
             >
               <Plus className="w-4 h-4" />

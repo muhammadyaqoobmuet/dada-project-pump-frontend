@@ -5,7 +5,7 @@ import { removeToken } from "@/lib/auth";
 
 const links = [
   { href: "/dashboard", label: "Dashboard" },
-  { href: "/ledger", label: "Ledger" },
+  { href: "/transactions", label: "Transactions" },
   { href: "/inventory", label: "Inventory" },
   { href: "/parties", label: "Parties" },
   { href: "/reports", label: "Reports" },
